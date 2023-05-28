@@ -8,5 +8,39 @@
  */
 int _printf(const char *format, ...)
 {
+	va_list input;
+	int i;
 
+	va_start(input, format);
+	for (i = 0; format[i] != '\0'; i++)
+	{
+		if (format[i] == '%')
+		{
+			i++;
+			if (format[i] == 'c')
+			{
+				char charInput = (char) va_arg(input, int);
 
+				putchar(charInput);
+			}
+			else if (format[i] == 's')
+			{
+				char *strInput = va_arg(input, char*);
+				int j = 0;
+
+				while (strInput[j] != '\0')
+				{
+					putchar(strInput[j]);
+					j++;
+				}
+			}
+		}
+		else
+		{
+			putchar(format[i]);
+		}
+		va_end(input);
+	}
+	putchar('\n');
+	return (i);
+}
