@@ -34,7 +34,7 @@ int formatPrint(const char *format, va_list input)
 	else if (*format == '%')
 	{
 		_putchar('%');
-		counter = 1;
+		counter = -1;
 	}
 	return (counter);
 }
