@@ -25,6 +25,6 @@ int _printf(const char *format, ...)
 			putchar(format[i]);
 	}
 	va_end(input);
-	total_count = (i + length) - 1;
+	total_count = (i + length);
 	return (total_count);
 }

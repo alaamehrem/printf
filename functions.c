@@ -1,19 +1,21 @@
 #include "main.h"
-#include <stdarg.h>
 #include <stdio.h>
+#include <stdarg.h>
 #include <stdlib.h>
 /**
  * formatPrint - switches through format specifiers
  * @format: character string
+ * @input: arrays of inputed string
  * Return: length of input
  */
-int formatPrint(const char* format, va_list input)
+int formatPrint(const char *format, va_list input)
 {
 	int counter = 0;
 
-	if( *format == 'c')
+	if (*format == 'c')
 	{
 		char charInput = (char) va_arg(input, int);
+
 		putchar(charInput);
 		counter = 1;
 	}
@@ -21,6 +23,7 @@ int formatPrint(const char* format, va_list input)
 	{
 		char *strInput = va_arg(input, char*);
 		int j = 0;
+
 		while (strInput[j] != '\0')
 		{
 			putchar(strInput[j]);
@@ -33,5 +36,5 @@ int formatPrint(const char* format, va_list input)
 		putchar('%');
 		counter = 1;
 	}
-	return(counter - 1);
+	return (counter);
 }
