@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 			length += formatPrint(&format[i], input);
 		}
 		else
-			putchar(format[i]);
+			_putchar(format[i]);
 	}
 	va_end(input);
 	total_count = (i + length);

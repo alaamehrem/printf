@@ -16,7 +16,7 @@ int formatPrint(const char *format, va_list input)
 	{
 		char charInput = (char) va_arg(input, int);
 
-		putchar(charInput);
+		_putchar(charInput);
 		counter = 1;
 	}
 	else if (*format == 's')
@@ -26,14 +26,14 @@ int formatPrint(const char *format, va_list input)
 
 		while (strInput[j] != '\0')
 		{
-			putchar(strInput[j]);
+			_putchar(strInput[j]);
 			j++;
 			counter++;
 		}
 	}
 	else if (*format == '%')
 	{
-		putchar('%');
+		_putchar('%');
 		counter = 1;
 	}
 	return (counter);
