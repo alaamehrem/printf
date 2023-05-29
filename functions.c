@@ -38,10 +38,10 @@ int formatPrint(const char *format, va_list input)
 	}
 	else if (*format == 'd' || *format == 'i')
 	{
-		if (*IntInput < 48 || *IntInput > 57)
-			return (-1);
 		int *IntInput = va_arg(input, int*);
 
+		if (*IntInput < 48 || *IntInput > 57)
+			return (-1);
 		int i;
 
 		for (int m = 48; i = 0; m <= 57; i++)
