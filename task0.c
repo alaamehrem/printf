@@ -30,6 +30,5 @@ int _printf(const char *format, ...)
 	}
 	va_end(input);
 	total_count = (i + length);
-	_putchar('\n');
 	return (total_count);
 }
