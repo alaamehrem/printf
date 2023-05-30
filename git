@@ -1,0 +1,7 @@
+#!/bin/bash
+
+read var
+read var2
+git add ${var}
+git commit -m {$var2}
+git push
