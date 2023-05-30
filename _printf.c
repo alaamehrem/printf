@@ -23,9 +23,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] != 'c' || format[i] != 's' || format[i] != '%' || format[i] != 'd' || format[i] != 'i')
-				return (-1);
-			else if (format[i] == 'c' || format[i] == 's' || format[i] == '%')
+			if (format[i] == 'c' || format[i] == 's' || format[i] == '%')
 				length += formatPrint(&format[i], input);
 			else if (format[i] == 'd' || format[i] == 'i')
 				length += formatPrintDI(&format[i], input);
