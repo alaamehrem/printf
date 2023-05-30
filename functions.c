@@ -36,26 +36,5 @@ int formatPrint(const char *format, va_list input)
 		_putchar('%');
 		counter = -1;
 	}
-	else if (*format == 'd' || *format == 'i')
-	{
-		int i;
-		int m = 47;
-
-		int *IntInput = va_arg(input, int*);
-
-		if (*IntInput < 48 || *IntInput > 57)
-			return (-1);
-
-		for (i = 0; m <= 57; i++)
-		{
-			if (IntInput[i] != m)
-				m++;
-			else
-			{
-				_putchar(m);
-				m = 48;
-			}
-		}
-	}
 	return (counter);
 }
