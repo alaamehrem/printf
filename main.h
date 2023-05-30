@@ -9,13 +9,14 @@
 
 #define NULL_STRING "(null)"
 
-
-int _putchar(char c);
-
 /* _printf.c module */
 int _printf(const char *format, ...);
 
 /* print_function.c module */
+
+/* _put.c module */
+int put _puts (char *str);
+int _putchar(int c);
 
 int formatPrint(const char *format, va_list input);
 #endif
