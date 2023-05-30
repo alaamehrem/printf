@@ -9,6 +9,11 @@
 
 #define NULL_STRING "(null)"
 
+/* function prinf d,i format  */
+int formatPrintDI(const char* format, va_list input);
+int NegativeNum(va_list input);
+int PositiveNum(va_list input);
+
 /* _printf.c module */
 int _printf(const char *format, ...);
 
