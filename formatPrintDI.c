@@ -31,7 +31,7 @@ int formatPrintDI(const char *format, va_list input)
 			counter = 1;
 		}
 	}
-	return (counter);
+	return (counter - 2 );
 }
 /**
  *NegativeNum - function that treat with negative number.
