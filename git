@@ -1,6 +1,8 @@
 #!/bin/bash
 
+echo "please enter files that you want add"
 read var
+echo "please write your  commit"
 read var2
 git add ${var}
 git commit -m "${var2}"
