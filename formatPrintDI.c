@@ -15,7 +15,7 @@ int formatPrintDI(const char *format, va_list input)
 	{
 		int intInput = va_arg(input, int);
 
-		if ((intInput > 99999999) || (intInput < -99999999))
+		if ((intInput > 2147483647) || (intInput < -2147483647))
 			return (-1);
 		else if (intInput < 0)
 		{
@@ -41,7 +41,7 @@ int formatPrintDI(const char *format, va_list input)
 int NegativeNum(int negativeInput)
 {
 	int counterN = 0;
-	int divisionCounter = 10000000;
+	int divisionCounter = 1000000000;
 
 	negativeInput = -negativeInput;
 	_putchar('-');
@@ -72,7 +72,7 @@ int NegativeNum(int negativeInput)
  */
 int PositiveNum(int positiveInput)
 {
-	int divisionCounter = 10000000;
+	int divisionCounter = 1000000000;
 	int counterP = 0;
 
 	while (divisionCounter > 0)
