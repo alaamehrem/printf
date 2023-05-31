@@ -24,7 +24,6 @@ int _printf(const char *format, ...);
 
 /* _put.c module */
 int _putchar(int c);
-int _puts(char *str);
 
 int formatPrint(const char *format, va_list input);
 #endif
