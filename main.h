@@ -7,6 +7,9 @@
 #include <limits.h>
 #include <stdlib.h>
 
+#define OUTPUT_BUF_SIZE 1024
+#define BUF_FLUSH -1
+
 #define NULL_STRING "(null)"
 
 /* function prinf d,i format  */
@@ -21,6 +24,7 @@ int _printf(const char *format, ...);
 
 /* _put.c module */
 int _putchar(int c);
+int _puts(char *str);
 
 int formatPrint(const char *format, va_list input);
 #endif
