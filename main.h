@@ -23,7 +23,7 @@ int _printf(const char *format, ...);
 /* print_function.c module */
 
 /* _put.c module */
-int _putchar(int c);
+int _putchar(char c);
 
 int formatPrint(const char *format, va_list input);
 #endif
